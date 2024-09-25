@@ -35,7 +35,7 @@
                                         <td class="text-center">
                                             <form onsubmit="return confirm('Apakah Anda Yakin ?');"
                                                 action="{{ route('posts.destroy', $post->id) }}" method="POST">
-                                                <a href="{{ route('posts.showww', $post->id) }}"
+                                                <a href="{{ route('posts.show', $post->id) }}"
                                                     class="btn btn-sm btn-dark">SHOW</a>
                                                 <a href="{{ route('posts.edit', $post->id) }}"
                                                     class="btn btn-sm btn-primary">EDIT</a>
@@ -61,7 +61,6 @@
 
     @stack('script')
     @stack('styles')
-    
 @endsection
 
 <style>
