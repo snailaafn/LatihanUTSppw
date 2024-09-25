@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
-                            @method('PUT')
+                            @method('GET')
 
                             <div class="form-group">
                                 <label class="font-weight-bold">GAMBAR</label>

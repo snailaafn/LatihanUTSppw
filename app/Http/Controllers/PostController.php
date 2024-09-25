@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
 
 //return type View
 use Illuminate\View\View;
@@ -24,7 +23,7 @@ class PostController extends Controller
     public function index(): View
     {
         //get posts
-        $posts = Post::latest()->paginate(5);
+        Post::latest()->paginate(5);
 
         //render view with posts
         return view('posts.index', compact('posts'));
@@ -37,7 +36,7 @@ class PostController extends Controller
      */
     public function create(): View
     {
-        return view('posts.create');
+        return view('postscreate');
     }
 
     /**
@@ -77,13 +76,13 @@ class PostController extends Controller
      * @param  mixed $id
      * @return View
      */
-    public function show(string $id): View
+    public function show(): View
     {
         //get post by ID
         $post = Post::findOrFail($id);
 
         //render view with post
-        return view('posts.show', compact('post'));
+        return view('posts.show', ('post'));
     }
 
     /**
@@ -98,7 +97,7 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
 
         //render view with post
-        return view('posts.edit', compact('post'));
+        return view('posts.edit', compact('postsss'));
     }
 
     /**
@@ -132,7 +131,7 @@ class PostController extends Controller
 
             //update post with new image
             $post->update([
-                'image'     => $image->hashName(),
+                'images'     => $image->hashName(),
                 'title'     => $request->title,
                 'content'   => $request->content
             ]);

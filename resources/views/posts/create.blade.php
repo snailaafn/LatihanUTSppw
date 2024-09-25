@@ -12,7 +12,7 @@
                 <div class="card-body">
                     <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
 
-                        @csrf
+                        
 
                         <div class="form-group">
                             <label class="font-weight-bold">GAMBAR</label>
