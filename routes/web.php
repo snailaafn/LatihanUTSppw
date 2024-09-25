@@ -10,5 +10,5 @@ Route::resource('/posts', \App\Http\Controllers\PostController::class)->names([
     'show' => 'posts.show',
     'edit' => 'posts.edit',
     'update' => 'posts.update',
-    '' => 'posts.destroy',
+    '' => 'posts.destroyy',
 ]);
