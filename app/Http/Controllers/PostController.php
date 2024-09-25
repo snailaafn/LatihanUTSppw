@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 //return type View
 use Illuminate\View\View;
@@ -14,7 +15,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
-{    
+{
     /**
      * index
      *
@@ -23,10 +24,10 @@ class PostController extends Controller
     public function index(): View
     {
         //get posts
-        Post::latest()->paginate(5);
+        $posts = Post::latest()->paginate(5);
 
         //render view with posts
-        return view('index', compact('posts'));
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -36,16 +37,17 @@ class PostController extends Controller
      */
     public function create(): View
     {
-        return view('create');
+        return view('posts.create');
     }
- 
+
     /**
      * store
      *
      * @param  mixed $request
      * @return RedirectResponse
      */
-    public function store($request): RedirectResponse
+
+    public function store(Request $request): RedirectResponse
     {
         //validate form
         $this->validate($request, [
@@ -68,7 +70,7 @@ class PostController extends Controller
         //redirect to index
         return redirect()->route('posts.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
-    
+
     /**
      * show
      *
@@ -98,7 +100,7 @@ class PostController extends Controller
         //render view with post
         return view('posts.edit', compact('post'));
     }
-        
+
     /**
      * update
      *
@@ -154,13 +156,13 @@ class PostController extends Controller
      * @param  mixed $post
      * @return void
      */
-    public function destroy($post): RedirectResponse
+    public function destroy(string $id): RedirectResponse
     {
         //get post by ID
-        $post = Post::findOrFail();
+        $post = Post::findOrFail($id);
 
         //delete image
-        Storage::delete('public/posts/'. $post->image);
+        Storage::delete('public/po  sts/'. $post->image);
 
         //delete post
         $post->delete();
