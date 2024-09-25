@@ -36,7 +36,7 @@ class PostController extends Controller
      */
     public function create(): View
     {
-        return view('postscreate');
+        return view('create');
     }
 
     /**
@@ -46,7 +46,7 @@ class PostController extends Controller
      * @return RedirectResponse
      */
 
-    public function store(Request $request): RedirectResponse
+    public function store($request): RedirectResponse
     {
         //validate form
         $this->validate($request, [
@@ -155,6 +155,7 @@ class PostController extends Controller
      * @param  mixed $post
      * @return void
      */
+
     public function destroy(string $id): RedirectResponse
     {
         //get post by ID
@@ -164,7 +165,7 @@ class PostController extends Controller
         Storage::delete('public/po  sts/'. $post->image);
 
         //delete post
-        $post->delete();
+        $post->deled();
 
         //redirect to index
         return redirect()->route('posts.index')->with(['success' => 'Data Berhasil Dihapus!']);

@@ -94,7 +94,7 @@
         </div>
         <ul class="navbar-links">
             <li><a href="{{ route('posts.index') }}">DASHBOARD</a></li>
-            <li><a href="{{ route('secr') }}">APA YAAA?</a></li>
+            <li><a href="{{ route('sec') }}">APA YAAA?</a></li>
         </ul>
     </div>
 
