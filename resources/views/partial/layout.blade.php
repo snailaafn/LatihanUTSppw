@@ -90,7 +90,7 @@
 
     <div class="sidebar">
         <div class="navbar-brand">
-            <a href="#">LATIHAN UTS</a>
+            <h3 class="ml-4 text-white">LATIHAN UTS</h3>
         </div>
         <ul class="navbar-links">
             <li><a href="#">MENU 1</a></li>
