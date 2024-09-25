@@ -6,9 +6,10 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 mt-5">
                 <div>
-                    <h3 class="text-center my-4">LATIHAN UTS LARAVEL</h3>
+                    <h5 class="w-full text-center" style="color: #333; font-size: 30px; font-weight:800; ">LATIHAN UTS LARAVEL
+                    </h5>
                     <hr>
                 </div>
                 <div class="card border-0 shadow-sm rounded">

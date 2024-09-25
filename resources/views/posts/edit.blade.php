@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container mt-5 mb-5">
+        <h5 style="color: #333; font-size: 30px; font-weight:800; ">EDIT DATA</h5>
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow-sm rounded">
