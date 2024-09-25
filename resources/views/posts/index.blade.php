@@ -8,7 +8,6 @@
     <title>PPW2</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-
 </head>
 
 <body style="background: lightgray">
@@ -17,8 +16,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <h3 class="text-center my-4">Tutorial Laravel 10 untuk Pemula</h3>
-                    <h5 class="text-center"><a href="#">PPW2</a></h5>
+                    <h3 class="text-center my-4">LATIHAN UTS LARAVEL</h3>
                     <hr>
                 </div>
                 <div class="card border-0 shadow-sm rounded">
@@ -69,21 +67,48 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    @stack('script')
+@endsection
 
-    <script>
-        //message with toastr
-        @if (session()->has('success'))
+<style>
+    .search-bar {
+        display: flex;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        overflow: hidden;
+    }
 
-            toastr.success('{{ session('success') }}', 'BERHASIL!');
-        @elseif (session()->has('error'))
+    .search-bar input {
+        padding: 10px;
+        border: none;
+        outline: none;
+        width: 100%;
+    }
 
-            toastr.error('{{ session('error') }}', 'GAGAL!');
-        @endif
-    </script>
+    .search-bar button {
+        padding: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 
-</body>
+    .search-bar button:hover {
+        background-color: #555;
+    }
+</style>
 
-</html>
+
+<script>
+    //message with toastr
+    @if (session()->has('success'))
+
+        toastr.success('{{ session('success') }}', 'BERHASIL!');
+    @elseif (session()->has('error'))
+
+        toastr.error('{{ session('error') }}', 'GAGAL!');
+    @endif
+</script>
