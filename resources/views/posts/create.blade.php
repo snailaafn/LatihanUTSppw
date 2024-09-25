@@ -1,7 +1,8 @@
 @extends('partial.layout')
 
 
-@section('content')
+{{-- @section('content') --}}
+
     <div class="container mt-5 mb-5">
         <h5 style="color: #333; font-size: 30px; font-weight:800; ">TAMBAH DATA</h5>
 
@@ -10,6 +11,7 @@
                 <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
                         <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
+
                             @csrf
 
                             <div class="form-group">
@@ -62,6 +64,7 @@
     </div>
 
     @stack('styles')
+    
 @endsection
 
 <style>
