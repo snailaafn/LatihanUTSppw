@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 //route resource
-// Route::resource('/', \App\Http\Controllers\PostController::class);
 Route::resource('/posts', \App\Http\Controllers\PostController::class)->names([
     'index' => 'posts.index',
     'create' => 'posts.create',
