@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 //route resource
-Route::resource('/posts', \App\Http\Controllers\PostController::class)->names([
-    'index' => 'posts.indek',
+Route::resource('/posts', PostController::class)->names([
+    'index' => 'posts.index',
     'create' => 'posts.create',
     'store' => 'posts.store',
     'show' => 'posts.show',
@@ -12,3 +13,8 @@ Route::resource('/posts', \App\Http\Controllers\PostController::class)->names([
     'update' => 'posts.update',
     '' => 'posts.destroy',
 ]);
+
+Route::get('/secret', function(){
+    return view('posts.secret');
+}
+)->name('secret');

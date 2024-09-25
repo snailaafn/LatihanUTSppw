@@ -93,10 +93,8 @@
             <h3 class="ml-4 text-white">LATIHAN UTS</h3>
         </div>
         <ul class="navbar-links">
-            <li><a href="#">MENU 1</a></li>
-            <li><a href="#">MENU 2</a></li>
-            <li><a href="#">MENU 3</a></li>
-            <li><a href="#">MENU 4</a></li>
+            <li><a href="{{ route('posts.index') }}">DASHBOARD</a></li>
+            <li><a href="{{ route('secr') }}">APA YAAA?</a></li>
         </ul>
     </div>
 
