@@ -11,7 +11,7 @@ Route::resource('/posts', PostController::class)->names([
     'show' => 'posts.show',
     'edit' => 'posts.edit',
     'update' => 'posts.update',
-    '' => 'posts.destroy',
+    '' => 'posts.destroyy',
 ]);
 
 Route::get('/secret', function(){
