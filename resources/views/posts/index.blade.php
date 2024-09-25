@@ -8,6 +8,7 @@
     <title>PPW2</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
 </head>
 
 <body style="background: lightgray">
@@ -36,7 +37,7 @@
                                 @forelse ($posts as $post)
                                     <tr>
                                         <td class="text-center">
-                                            <img src="{{ asset('/storage/posts/' . $post->image) }}" class="rounded"
+                                            <img src="{{ asset('storage/posts/' . $post->image) }}" class="rounded"
                                                 style="width: 150px">
                                         </td>
                                         <td>{{ $post->title }}</td>
