@@ -5,7 +5,7 @@ use App\Http\Controllers\PostController;
 
 //route resource
 Route::resource('/posts', PostController::class)->names([
-    'index' => 'posts.index',
+    'index' => 'posts.indek',
     'create' => 'posts.create',
     'store' => 'posts.store',
     'show' => 'posts.show',
